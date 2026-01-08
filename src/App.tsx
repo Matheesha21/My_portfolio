@@ -1,6 +1,14 @@
 import React, { cloneElement, Component } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Github, Linkedin, Mail, Download, ExternalLink } from 'lucide-react';
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      [elemName: string]: any;
+    }
+  }
+}
 // --- Types ---
 interface Experience {
   year: string;
@@ -141,12 +149,14 @@ export function App() {
                 <SocialLink icon={<Mail />} href="mailto:as20240947@sci.sjp.ac.lk" label="Email" />
               </div>
 
-              <a href="#" download="Matheesha_CV.pdf" className="group flex items-center gap-3 text-sm font-bold tracking-widest hover:text-[#00F0FF] transition-colors">
-                <span className="border-b-2 border-transparent group-hover:border-[#00F0FF] pb-1 transition-all">
-                  DOWNLOAD CV
-                </span>
-                <Download className="w-4 h-4 group-hover:translate-y-1 transition-transform duration-300" />
+              <a
+                href="/Matheeshacv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-3 text-sm font-bold tracking-widest hover:text-[#00F0FF] transition-colors">
+                DOWNLOAD CV <Download className="w-4 h-4" />
               </a>
+
             </div>
           </div>
         </motion.div>
