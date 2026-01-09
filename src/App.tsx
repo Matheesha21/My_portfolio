@@ -1,6 +1,12 @@
 import React, { cloneElement, Component } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Github, Linkedin, Mail, Download, ExternalLink } from 'lucide-react';
+const profilePic = "/assets/profile.jpg";
+// Serve CV as a static URL from the public folder to avoid TypeScript module errors for .pdf imports.
+// Move 'Matheeshacv.pdf' into the project's 'public/assets' folder so it's available at '/assets/Matheeshacv.pdf'.
+const cvFile = "/assets/Matheeshacv.pdf";
+
+
 
 declare global {
   namespace JSX {
@@ -118,7 +124,9 @@ export function App() {
       }}>
           {/* Profile Photo */}
           <div className="mb-12">
-            <img src="/WhatsApp_Image_2025-12-21_at_15.14.18.jpg" alt="Matheesha Weerawansha" className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-[#00F0FF] object-cover" />
+            <img 
+            src={profilePic} 
+            alt="Matheesha Weerawansha" className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-[#00F0FF] object-cover" />
           </div>
 
           <h1 className="text-7xl md:text-9xl font-bold tracking-tighter leading-[0.9] mb-8">
@@ -150,10 +158,10 @@ export function App() {
               </div>
 
               <a
-                href="/Matheeshacv.pdf"
+                href={cvFile}
+                download
                 target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-3 text-sm font-bold tracking-widest hover:text-[#00F0FF] transition-colors">
+                rel="noopener noreferrer">
                 DOWNLOAD CV <Download className="w-4 h-4" />
               </a>
 
