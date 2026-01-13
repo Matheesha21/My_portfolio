@@ -1,10 +1,9 @@
 import React, { cloneElement, Component } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Github, Linkedin, Mail, Download, ExternalLink } from 'lucide-react';
-const profilePic = "/assets/profile.jpg";
-// Serve CV as a static URL from the public folder to avoid TypeScript module errors for .pdf imports.
-// Move 'Matheeshacv.pdf' into the project's 'public/assets' folder so it's available at '/assets/Matheeshacv.pdf'.
-const cvFile = "/assets/Matheeshacv.pdf";
+import profilePic from "./assets/profile.jpg";
+import cvFile from "./assets/Matheeshacv.pdf";
+
 
 
 
