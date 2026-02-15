@@ -39,15 +39,28 @@ const experienceData: Experience[] = [{
   role: 'IT TRAINING COORDINATOR',
   company: 'SENURA CIVIL ENGINEERING',
   description: 'Coordinating IT training programs and technical workshops. Managing technology infrastructure and supporting digital transformation initiatives.'
-}];
-const projectsData: Project[] = [{
-  id: '01',
-  title: 'HOME ENERGY SAVING KIT',
-  category: 'IOT / EMBEDDED SYSTEMS',
-  description: 'First-year university project developing an intelligent energy monitoring system using Arduino and IoT sensors for real-time power consumption tracking and optimization.',
-  tags: ['C/C++', 'ARDUINO', 'IOT', 'EMBEDDED', 'CIRCUIT DESIGN', 'CLOUD'],
-  link: 'https://youtu.be/3EipPmKdW1w?si=pgnECe0se0gCO-Ak'
-}];
+const projectsData: Project[] = [
+  {
+    id: '01',
+    title: 'HOME ENERGY SAVING KIT',
+    category: 'IOT / EMBEDDED SYSTEMS',
+    description:
+      'First-year university project developing an intelligent energy monitoring system using Arduino and IoT sensors for real-time power consumption tracking and optimization.',
+    tags: ['C/C++', 'ARDUINO', 'IOT', 'EMBEDDED', 'CIRCUIT DESIGN', 'CLOUD'],
+    link: 'https://youtu.be/3EipPmKdW1w?si=pgnECe0se0gCO-Ak',
+  },
+  {
+    id: '02',
+    title: 'VALENTINE PROPOSEL',
+    category: 'FULL STACK DEVELOPMENT',
+    description:
+      'A romantic web application built with HTML/CSS allowing users to create personalized proposal pages with interactive features, animations, and a heartfelt message.',
+    tags: ['HTML', 'CSS'],
+    link: 'https://matheesha21.github.io/Valentine/', // add correct link
+  },
+];
+
+
 const skillsData: string[] = ['FULL STACK DEVELOPMENT', 'REACT / NEXT.JS', 'NODE.JS / EXPRESS', 'TYPESCRIPT', 'EMBEDDED SYSTEMS', 'IOT INTEGRATION', 'C/C++ (ARDUINO)', 'CIRCUIT DESIGN'];
 // --- Components ---
 const Section = ({
